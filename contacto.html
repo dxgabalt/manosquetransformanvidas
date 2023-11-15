@@ -5,40 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Acerca de Manos Que Transforman Vidas</title>
+    <link rel="icon" href="logo_mqtv.jpg">
+
+    <title>Contacto - Manos Que Transforman Vidas</title>
 </head>
+
 
 <body>
     <div class="container">
         <header>
             <div class="logo">
-                <img src="ruta-del-logo.png" alt="Logo de Manos Que Transforman Vidas">
+                <a href="index.html"><img src="logo_mqtv.jpg" alt="Logo de Manos Que Transforman Vidas"></a>
                 <h1>Manos Que Transforman Vidas</h1>
             </div>
             <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="acercade.html" class="active">Acerca de</a></li>
-                    <li><a href="#">Servicios</a></li>
-                    <li><a href="#">Contacto</a></li>
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="acercade.html">Acerca de</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
+                <div class="menu-icon">&#9776;</div>
             </nav>
         </header>
-        <main>
-            <section class="about-section">
-                <h2>Acerca de nosotros</h2>
-                <p>Somos una <span class="highlight">organización visionaria</span> que abraza el poder de la comunidad
-                    y la colaboración. Nuestra misión es crear un impacto duradero en la sociedad al impulsar proyectos
-                    innovadores y programas de empoderamiento. Creemos en la capacidad de transformación que yace en
-                    cada individuo y trabajamos incansablemente para desbloquear ese potencial.</p>
-                <p>Nuestra visión es un mundo donde cada persona tenga la oportunidad de alcanzar su máximo potencial y
-                    contribuir positivamente a la sociedad. A través de nuestra dedicación a la educación, la innovación
-                    y la colaboración, nos esforzamos por construir un futuro mejor para todos.</p>
-            </section>
-            <!-- Puedes seguir agregando más contenido relacionado con "Acerca de" aquí -->
-        </main>
-    </div>
-    <script src="script.js"></script>
+
+        <section class="contact-section">
+                <h2>Contacto</h2>
+                <p>¿Interesado en conocer más? ¡No dudes en ponerte en contacto con nosotros! Estamos aquí para
+                    responder a tus preguntas, discutir colaboraciones y escuchar tus ideas. Tu transformación comienza
+                    con un simple paso: ¡envíanos un mensaje hoy mismo!</p>
+                <div class="contact-form">
+                    <!-- Aquí va tu formulario de contacto -->
+                    <form action="enviar_formulario.php" method="post">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+                        <button type="submit">Enviar Mensaje</button>
+                    </form>
+                </div>
+        </section>
+</div>
 </body>
+<script src="script.js"></script>
 
 </html>

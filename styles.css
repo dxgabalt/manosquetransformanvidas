@@ -1,11 +1,21 @@
 body {
-    background-color: #f28416;
+    background: linear-gradient(to bottom, #f28416, #ffad4d);
     margin: 0;
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-family: Arial, sans-serif;
+}
+
+.container {
+    background-color: white;
+    max-width: 1200px; /* O cualquier valor que desees */
+    margin: 0 auto; /* Centra el contenedor */
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .logo img {
@@ -19,19 +29,7 @@ body {
     margin: 0;
 }
 
-.container {
-    background-color: white;
-    margin: 100px;
-    padding: 50px 100px 0;
-    text-align: center;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-
-/* Agrega aquí estilos adicionales según tus necesidades */
-
-
+/* Estilos del encabezado */
 header {
     display: flex;
     justify-content: space-between;
@@ -39,90 +37,95 @@ header {
     padding: 10px 0;
 }
 
-/* Agrega estos estilos para personalizar la barra de navegación */
+/* Estilos de la barra de navegación */
 nav {
     background-color: #fff;
     padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-nav ul {
+.nav-links {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
 }
 
-nav li {
+.nav-links li {
     margin: 0 20px;
 }
 
-nav a {
+.nav-links a {
     text-decoration: none;
-    color: #000;
+    color: #f28416;
     font-size: 16px;
     transition: color 0.3s;
 }
 
-nav a:hover {
+.nav-links a:hover {
     color: #555;
 }
 
 /* Estilo para resaltar el enlace activo */
-nav .active {
+.nav-links .active {
     font-weight: bold;
 }
 
-/* Estilo para la barra de navegación en dispositivos móviles */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    nav li {
-        margin: 10px 0;
-    }
+/* Icono del menú para dispositivos móviles */
+.menu-icon {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
 }
 
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        position: initial;
+        top: 40px;
+        left: 0;
+        background-color: #fff;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+}
 
 main {
     padding: 20px 0;
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    color: #000;
-    background-color: rgb(255, 255, 255);
-}
-
-/* */
-
-/* */
-
-/* */
-
-/* */
-
-/* */
-
-/* */
-
 /* Estilos para la sección de introducción */
 .inicio {
     text-align: center;
-    padding: 50px 0;
+    padding: 40px; /* Aumentado el relleno para un aspecto más espacioso */
+    background-color: #f8f8f8; /* Cambiado el fondo a un gris claro para resaltar */
+    border-radius: 15px; /* Añadido un borde redondeado */
 }
 
 .inicio h2 {
-    font-size: 28px;
+    font-size: 36px;
     margin-bottom: 20px;
     color: #f28416;
 }
 
 .inicio p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
     color: #555;
 }
@@ -132,45 +135,23 @@ footer {
     font-weight: bold;
 }
 
-/* Estilos para los enlaces de navegación */
-nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-}
-
-nav a {
-    text-decoration: none;
-    color: #f28416;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-nav a:hover {
-    color: #555;
-}
-
-/* Más estilos innovadores y frescos aquí */
-
 /* Estilos para la sección "Acerca de nosotros" */
 .acerca {
-    background-color: #f5f5f5;
-    padding: 80px 0;
-    text-align: center;
-    border-radius: 10px;
-
+    background-color: #fff;
+    padding: 40px; /* Aumentado el relleno para un aspecto más espacioso */
+    text-align: justify;
+    border-radius: 15px;
+    margin-bottom: 40px; /* Agregado espacio en la parte inferior para evitar superposición */
 }
 
 .acerca h2 {
-    font-size: 28px;
+    font-size: 36px;
     margin-bottom: 20px;
     color: #f28416;
 }
 
 .acerca p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
     color: #555;
     max-width: 800px;
@@ -182,24 +163,42 @@ nav a:hover {
     font-weight: bold;
 }
 
-/* Otros estilos innovadores y frescos aquí */
+/* Estilos para la sección "Nuestro Equipo" */
+.team {
+    margin-top: 60px; /* Agregado espacio en la parte superior para separar del contenido anterior */
+}
 
+.team h3 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #f28416;
+}
 
-/* Estilos para la sección "proyectos que realizamos" */
+.team p {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Estilos para la sección "Proyectos" */
 .proyectos {
-    background-color: white;
-    padding: 80px 0;
+    background-color: #f8f8f8; /* Cambiado el fondo a un gris claro para resaltar */
+    padding: 40px; /* Aumentado el relleno para un aspecto más espacioso */
     text-align: center;
+    border-radius: 15px;
+    margin-bottom: 40px; /* Agregado espacio en la parte inferior para evitar superposición */
 }
 
 .proyectos h2 {
-    font-size: 28px;
+    font-size: 36px;
     margin-bottom: 20px;
     color: #f28416;
 }
 
 .proyectos p {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
     color: #555;
     max-width: 800px;
@@ -211,22 +210,48 @@ nav a:hover {
     font-weight: bold;
 }
 
-/* Otros estilos innovadores y frescos aquí */
+/* Estilos para la galería de proyectos */
+.project-gallery {
+    margin-top: 60px; /* Agregado espacio en la parte superior para separar del contenido anterior */
+}
 
+.project {
+    margin-bottom: 40px;
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 15px; /* Añadido un borde redondeado */
+}
+
+.project h3 {
+    font-size: 28px;
+    margin: 20px 0;
+    color: #333;
+}
+
+.project p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
 /* Estilos para la sección "Contacto" */
 .contact-section {
     background-color: #f5f5f5;
-    padding: 80px 0;
+    padding: 80px 20px;
     text-align: center;
     border-radius: 10px;
-
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px; /* Agregado espacio en la parte inferior para evitar superposición */
 }
 
 .contact-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+    font-size: 32px;
     color: #f28416;
+    margin-bottom: 20px;
 }
 
 .contact-section p {
@@ -237,49 +262,647 @@ nav a:hover {
     margin: 0 auto;
 }
 
-.contact-section .highlight {
+/* Estilos para el formulario de contacto */
+.contact-form {
+    margin-top: 30px; /* Agregado espacio en la parte superior para separar del contenido anterior */
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    font-size: 18px;
+    color: #f28416;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #f28416;
+    color: white;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #d36900;
+}
+
+
+/* Estilos para Testimonios y Experiencias */
+.testimonials {
+    background-color: #fff; /* Cambiado el fondo a blanco para resaltar */
+    padding: 40px; /* Aumentado el relleno para un aspecto más espacioso */
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 40px; /* Agregado espacio en la parte inferior para evitar superposición */
+}
+
+.testimonial {
+    margin-bottom: 40px;
+}
+
+.testimonial p {
+    font-size: 20px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.testimonial cite {
+    display: block;
+    font-style: italic;
+    font-weight: bold;
+    color: #f28416; /* Color destacado para el nombre del testimonio */
+}
+
+/* Galería de Imágenes */
+.image-gallery {
+    background-color: #f5f5f5; /* Cambiado el fondo para un contraste sutil */
+    padding: 40px;
+    text-align: center;
+    border-radius: 15px;
+    margin-bottom: 40px;
+}
+
+.image-gallery h2 {
+    font-size: 36px; /* Aumentado el tamaño del título para mayor impacto */
+    color: #f28416;
+    margin-bottom: 30px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px; /* Aumentado el espacio entre las imágenes */
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px; /* Aumentado el radio del borde para un efecto más suave */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Aumentado el factor de escala al hacer hover */
+}
+
+/* Estilos para Participación Comunitaria */
+.community-engagement {
+    background-color: #f9f9f9;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.community-engagement p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Estilos para Educación y Concientización */
+.education-awareness {
+    background-color: #fff;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.education-awareness p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Estilos para Historias de Éxito */
+.success-stories {
+    background-color: #fff; /* Cambiado el fondo a blanco para resaltar */
+    padding: 40px 20px; /* Aumentado el relleno para un aspecto más espacioso */
+    text-align: center;
+    border-radius: 20px; /* Aumentado el radio del borde para un efecto más suave */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.success-stories h2 {
+    font-size: 36px; /* Aumentado el tamaño del título para mayor impacto */
+    color: #f28416;
+    margin-bottom: 30px;
+}   
+
+.success-story {
+    background-color: #f5f5f5; /* Cambiado el fondo para un contraste sutil */
+    padding: 30px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.success-story:hover {
+    transform: scale(1.02); /* Aumentado el factor de escala al hacer hover */
+}
+
+.success-story h3 {
+    font-size: 28px; /* Aumentado el tamaño del subtítulo */
+    color: #f28416;
+    margin-bottom: 15px;
+}
+
+.success-story p {
+    font-size: 18px; /* Aumentado el tamaño del texto para una mejor legibilidad */
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Estilos para Blog o Noticias */
+.blog {
+    padding: 80px 20px; /* Aumentado el relleno para un aspecto más espacioso */
+    text-align: center;
+}
+
+.blog h2 {
+    font-size: 36px; /* Aumentado el tamaño del título para mayor impacto */
+    color: #f28416;
+    margin-bottom: 40px;
+}
+
+.blog-post {
+    background-color: #fff; /* Cambiado el fondo a blanco para resaltar */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.blog-post:hover {
+    transform: scale(1.02); /* Aumentado el factor de escala al hacer hover */
+}
+
+.blog-post h3 {
+    font-size: 28px; /* Aumentado el tamaño del subtítulo */
+    color: #f28416;
+    margin-bottom: 15px;
+}
+
+.blog-post p {
+    font-size: 18px; /* Aumentado el tamaño del texto para una mejor legibilidad */
+    line-height: 1.6;
+    color: #555;
+}
+
+
+/* Estilos para Datos e Impacto */
+.impact-data {
+    background-color: #fff; /* Cambiado el fondo a blanco para resaltar */
+    padding: 80px 20px; /* Aumentado el relleno para un aspecto más espacioso */
+    text-align: center;
+    border-radius: 20px; /* Aumentado el radio del borde para un efecto más suave */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.impact-data h2 {
+    font-size: 36px; /* Aumentado el tamaño del título para mayor impacto */
+    margin-bottom: 30px;
+    color: #f28416;
+}
+
+.impact-data p {
+    font-size: 18px; /* Aumentado el tamaño del texto para una mejor legibilidad */
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+/* Estilos para los números de impacto */
+.impact-numbers {
+    display: flex;
+    justify-content: space-around;
+}
+
+.impact-item {
+    flex: 1;
+    padding: 20px;
+    background-color: #f7f7f7; /* Cambiado el fondo para un contraste sutil */
+    border-radius: 20px;
+    margin: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.impact-item:hover {
+    transform: scale(1.05); /* Aumentado el factor de escala al hacer hover */
+}
+
+.impact-item h3 {
+    font-size: 24px; /* Aumentado el tamaño del subtítulo */
+    margin-bottom: 15px;
+    color: #f28416;
+}
+
+.impact-item p {
+    font-size: 24px;
+    margin: 0;
+    color: #555;
+}
+
+.impact-item .number {
+    font-size: 36px;
     color: #f28416;
     font-weight: bold;
 }
 
-/* Otros estilos innovadores y frescos aquí */
-
-
-/* Estilos para la sección de proyectos */
-.projects-section {
-    background-color: #f5f5f5;
-    padding: 80px 0;
+/* Estilos para Videos Inspiradores */
+.inspiring-videos {
+    background-color: #f5f5f5; /* Cambiado el fondo para un contraste sutil */
+    padding: 80px 20px; /* Aumentado el relleno para un aspecto más espacioso */
     text-align: center;
+    border-radius: 20px; /* Aumentado el radio del borde para un efecto más suave */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.projects-section h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
+.video {
+    margin-bottom: 40px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.video iframe {
+    width: 100%;
+    height: 400px; /* Ajustado la altura para un tamaño más equilibrado */
+    border: none;
+}
+
+/* Estilos para el título del video */
+.video h3 {
+    font-size: 28px; /* Aumentado el tamaño del título para mayor impacto */
+    margin: 20px 0;
     color: #f28416;
 }
 
-.project {
+
+/* Estilos para Eventos Futuros */
+.upcoming-events {
+    background-color: #fff; /* Cambiado el fondo a blanco para resaltar */
+    padding: 60px 20px; /* Aumentado el relleno para un aspecto más espacioso */
+    text-align: center;
+    border-radius: 20px; /* Aumentado el radio del borde para un efecto más suave */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
     margin-bottom: 40px;
 }
 
-.project img {
-    max-width: 100%;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+.upcoming-events h2 {
+    font-size: 36px; /* Aumentado el tamaño del título para mayor impacto */
+    color: #f28416;
+    margin-bottom: 30px;
 }
 
-.project h3 {
-    font-size: 22px;
-    margin: 20px 0;
-    color: #333;
+.event {
+    background-color: #f7f7f7; /* Cambiado el fondo para un contraste sutil */
+    padding: 40px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
 }
 
-.project p {
-    font-size: 16px;
+.event:hover {
+    transform: scale(1.02); /* Aumentado el factor de escala al hacer hover */
+}
+
+.event h3 {
+    font-size: 28px; /* Aumentado el tamaño del subtítulo */
+    color: #f28416;
+    margin-bottom: 15px;
+}
+
+.event p {
+    font-size: 18px; /* Aumentado el tamaño del texto para una mejor legibilidad */
     line-height: 1.6;
     color: #555;
-    max-width: 600px;
-    margin: 0 auto;
 }
 
-/* Otros estilos innovadores y frescos aquí */
+.event a {
+    display: inline-block;
+    background-color: #f28416;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background-color 0.3s;
+}
+
+.event a:hover {
+    background-color: #d36900;
+}
+
+/* Estilos para Colaboraciones y Alianzas */
+.partnerships {
+    background-color: #fff; /* Cambiado el fondo a blanco para resaltar */
+    padding: 60px 20px; /* Aumentado el relleno para un aspecto más espacioso */
+    text-align: center;
+    border-radius: 20px; /* Aumentado el radio del borde para un efecto más suave */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.partnerships h2 {
+    font-size: 36px; /* Aumentado el tamaño del título para mayor impacto */
+    color: #f28416;
+    margin-bottom: 30px;
+}
+
+.partnerships p {
+    font-size: 18px; /* Aumentado el tamaño del texto para una mejor legibilidad */
+    line-height: 1.6;
+    color: #555;
+}
+
+.partner-logos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.partner-logos img {
+    max-width: 120px; /* Reducido el ancho máximo de los logotipos para un mejor diseño */
+    margin: 0 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+.partner-logos img:hover {
+    transform: scale(1.1); /* Aumentado el factor de escala al hacer hover */
+}
+
+/* Estilos para Participación Comunitaria */
+.community-engagement {
+    background-color: #f7f7f7; /* Cambiado el fondo para un contraste sutil */
+    padding: 60px 20px; /* Aumentado el relleno para un aspecto más espacioso */
+    text-align: center;
+    border-radius: 20px; /* Aumentado el radio del borde para un efecto más suave */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.community-engagement h2 {
+    font-size: 36px; /* Aumentado el tamaño del título para mayor impacto */
+    color: #f28416;
+    margin-bottom: 30px;
+}
+
+.community-engagement p {
+    font-size: 18px; /* Aumentado el tamaño del texto para una mejor legibilidad */
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+/* Estilos para el formulario o sección de comentarios */
+.comment-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.comment-form {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.comment-form textarea {
+    width: 100%;
+    padding: 12px; /* Aumentado el relleno para un aspecto más espacioso */
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.comment-form button {
+    background-color: #f28416;
+    color: white;
+    font-size: 18px; /* Aumentado el tamaño del texto del botón */
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.comment-form button:hover {
+    background-color: #d36900;
+}
+
+/* Estilos para el enlace de Facebook */
+.facebook-link {
+    margin-top: 20px;
+    text-decoration: none;
+    display: inline-block;
+    background-color: #3b5998;
+    color: #fff;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 18px; /* Aumentado el tamaño del texto del enlace */
+    transition: background-color 0.3s;
+}
+
+.facebook-link:hover {
+    background-color: #2d4373;
+}
+
+/* Estilos para Educación y Concientización */
+.education-awareness {
+    background-color: #fff; /* Cambiado el fondo a blanco para resaltar */
+    padding: 60px 20px; /* Aumentado el relleno para un aspecto más espacioso */
+    text-align: center;
+    border-radius: 20px; /* Aumentado el radio del borde para un efecto más suave */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+}
+
+.education-awareness h2 {
+    font-size: 36px; /* Aumentado el tamaño del título para mayor impacto */
+    color: #f28416;
+    margin-bottom: 30px;
+}
+
+.education-awareness p {
+    font-size: 18px; /* Aumentado el tamaño del texto para una mejor legibilidad */
+    line-height: 1.6;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+/* Estilos para los enlaces educativos */
+.educational-links {
+    margin-bottom: 30px;
+}
+
+.educational-links a {
+    display: inline-block;
+    background-color: #f28416;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin: 0 10px;
+    transition: background-color 0.3s;
+}
+
+.educational-links a:hover {
+    background-color: #d36900;
+}
+
+/* Estilos para documentos descargables */
+.downloadable-documents {
+    text-align: center; /* Centrado el texto de la sección */
+}
+
+.downloadable-documents h3 {
+    font-size: 28px; /* Aumentado el tamaño del subtítulo */
+    color: #f28416;
+    margin-bottom: 20px;
+}
+
+.downloadable-documents ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.downloadable-documents li {
+    margin-bottom: 15px;
+}
+
+.downloadable-documents a {
+    color: #555;
+    text-decoration: none;
+    font-size: 18px; /* Aumentado el tamaño del texto para una mejor legibilidad */
+    transition: color 0.3s;
+}
+
+.downloadable-documents a:hover {
+    color: #f28416;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        position: absolute;
+        top: 70px; /* Ajusta la posición del menú desplegable */
+        left: 0;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        z-index: 1; /* Añade una elevación para asegurarse de que esté sobre el contenido */
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        margin: 5px 0;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    .container {
+        padding: 10px; /* Ajusta el espaciado general del contenedor */
+    }
+
+    .inicio,
+    .acerca,
+    .proyectos,
+    .contact-section,
+    .testimonials,
+    .image-gallery,
+    .education-awareness,
+    .success-stories,
+    .blog,
+    .impact-data,
+    .upcoming-events,
+    .partnerships,
+    .community-engagement {
+        padding: 20px; /* Ajusta el relleno general para las secciones */
+    }
+
+    .project img,
+    .video iframe {
+        height: 200px; /* Ajusta la altura de las imágenes y videos */
+    }
+
+    .project h3,
+    .testimonial p,
+    .success-story p,
+    .blog-post p,
+    .impact-data h2,
+    .impact-data p,
+    .event h3,
+    .event p,
+    .partnerships p,
+    .community-engagement h2,
+    .community-engagement p,
+    .education-awareness h2,
+    .education-awareness p {
+        font-size: 16px; /* Ajusta el tamaño del texto */
+    }
+
+    .downloadable-documents h3 {
+        font-size: 20px; /* Ajusta el tamaño del subtítulo */
+    }
+
+    .downloadable-documents a {
+        font-size: 16px; /* Ajusta el tamaño del texto del enlace */
+    }
+
+    .logo img {
+        height: 40px; /* Ajusta la altura del logo */
+    }
+
+    header {
+        flex-direction: column; /* Ajusta la dirección del encabezado en dispositivos móviles */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        background-color: #fff;
+        z-index: 1;
+    }
+}
